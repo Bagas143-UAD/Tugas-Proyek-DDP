@@ -6,7 +6,7 @@ using namespace std;
 
 const int MAX_ITEMS = 100;
 
-// Record untuk menyimpan data barang
+
 struct Item {
     int id;
     string nama;
@@ -14,11 +14,11 @@ struct Item {
     int stock;
 };
 
-// Array untuk menyimpan barang
+
 Item items[MAX_ITEMS];
 int itemCount = 0;
 
-// Fungsi untuk menambahkan barang ke dalam sistem
+
 void input() {
     if (itemCount >= MAX_ITEMS) {
         cout << "\nGagal menambahkan barang, kapasitas penuh!\n";
@@ -39,7 +39,7 @@ void input() {
     cout << "Barang berhasil ditambahkan!\n";
 }
 
-// Fungsi untuk menampilkan daftar barang
+
 void tampilan() {
     if (itemCount == 0) {
         cout << "\nTidak ada barang yang tersedia.\n";
@@ -53,7 +53,7 @@ void tampilan() {
     }
 }
 
-// Fungsi untuk menyimpan data barang ke file
+
 void simpan() {
     ofstream file("itemsa.txt");
     if (!file) {
@@ -69,7 +69,7 @@ void simpan() {
     cout << "\nData barang berhasil disimpan ke file!\n";
 }
 
-// Fungsi untuk memuat data barang dari file
+
 void tutup() {
     ifstream file("itemsa.txt");
     if (!file) {
@@ -93,7 +93,7 @@ void tutup() {
     cout << "\nData barang berhasil dimuat dari file!\n";
 }
 
-// Fungsi untuk melakukan transaksi
+
 void jual() {
     if (itemCount == 0) {
         cout << "\nTidak ada barang yang tersedia untuk dijual.\n";
